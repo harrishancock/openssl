@@ -180,7 +180,7 @@ int tls13_generate_secret(SSL *s, const EVP_MD *md,
     kctx = EVP_KDF_CTX_new(kdf);
     EVP_KDF_free(kdf);
     if (kctx == NULL) {
-        SSLfatal(s, SSL_AD_INTERNAL_ERROR, ERR_R_INTERNAL_ERROR);
+        SSLfatal(s, SSL_AD_INTERNAL_ERROR, ERR_R_DISABLED);
         return 0;
     }
 
